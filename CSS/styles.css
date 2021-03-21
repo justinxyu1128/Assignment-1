@@ -1,3 +1,4 @@
+
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 85px);
@@ -62,8 +63,9 @@ ul>li {
     padding-left: 0;
 }
 
-h4 {
+#sidehead {
     margin-bottom: 0;
+    font-size: 15px;
 }
 
 #textarea {
@@ -71,11 +73,14 @@ h4 {
     grid-row-start: 10;
     display: flex;
     flex-direction: row;
+    width: 250px;
 }
 
 #newnote {
     background-color: #f2e9de;
     font-family: 'Averia Serif Libre', cursive;
+    width: 150px;
+    height: 200px;
 }
 
 #textareabuttons {
@@ -115,4 +120,80 @@ button:hover {
     grid-column-end: 2;
     grid-row-start: 5;
     grid-row-end: 5;
+}
+
+@media only screen and (min-width: 768px) {
+    .grid {
+        font-size: 18px;
+        grid-template-columns: repeat(8, 128px);
+        grid-template-rows: repeat(25, 36px);
+    }
+    header {
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        width: 150px;
+    }
+    .slideout {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3;
+        grid-row-end: 3;
+        width: 40px;
+    }
+    footer {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 25;
+        grid-row-end: 25;
+        width: 400px;
+    }
+    .sidebar {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 256px;
+        height: 900px;
+    }
+    #sidehead {
+        margin-bottom: 0;
+        font-size: 19px;
+    }
+    #textarea {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 6;
+        grid-row-end: 10;
+        width: 400px;
+        align-content: flex-start;
+        
+    }
+    #newnote {
+        width: 370px;
+        font-size: 18px;
+    }
+    #textareabuttons {
+        grid-column-start: 6;
+        grid-row-start: 12;
+
+    }
+    #save {
+        font-size: 18px;
+    }
+    
+    #del {
+        font-size: 18px;
+    }
+    
+    #note {
+        width: 250px;
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 7;
+    }
+    button {
+        font-size: 32px;
+        height: max-content;
+    }
 }
