@@ -16,7 +16,24 @@
     </ul>
     </header>
     <body>
-    <button class="slideout" type="button">>></button>
+        <div class="sidebar">
+            <button type="button"><<</button>
+            <h4>my notes</h4>
+            <ul id="notelist">
+                <li>note one</li>
+                <li>note two</li>
+            </ul>
+        </div>
+        <div id="textarea">
+            <div id="note">
+                <button type="button">+</button>
+                <textarea id="newnote" rows="10" cols="20">your note here</textarea>
+            </div>
+        </div>
+        <div id="textareabuttons">
+            <button type="button" id="save">save</button>
+            <button type="button" id="del">delete</button>
+        </div>
     </body>
     <footer>
     <p> Copyright &copy; 2021, J Corp. All rights reserved.</p>

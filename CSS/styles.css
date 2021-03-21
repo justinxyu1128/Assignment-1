@@ -33,14 +33,65 @@ footer {
     grid-row-end: 26;
     width: 300px;
 }
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between
     
 }
+
 ul>li {
     list-style-type: none;
+}
+
+
+.sidebar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #f2e9de;
+    width: 85px;
+    height: 675px;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+#notelist {
+    padding-left: 0;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+#textarea {
+    grid-column-start: 3;
+    grid-row-start: 10;
+    display: flex;
+    flex-direction: row;
+}
+
+#newnote {
+    background-color: #f2e9de;
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+#textareabuttons {
+    grid-column-start: 4;
+    grid-row-start: 17;
+    display: flex;
+    flex-direction: row;
+}
+
+#save {
+    font-size: 13px;
+}
+
+#del {
+    font-size: 13px;
+    color: #eb6f92;
 }
 
 button {
@@ -49,7 +100,6 @@ button {
     background-color: unset;
     font-family: 'Averia Serif Libre', cursive;
     font-size: 20px;
-
 }
 
 button:hover {
@@ -60,7 +110,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     width: 250px;
-    align-items: center;
+    align-items: flex-start;
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 5;
