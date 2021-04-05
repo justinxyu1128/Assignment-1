@@ -1,17 +1,11 @@
-/* two sizes are 1024(laptop) and 425 px(mobile */
+/* two sizes are 1920*1080(laptop) and 425*675(mobile */
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 85px);
-    grid-template-rows: repeat(27, 25px);
+    font-size: 18px;
+    grid-template-columns: 40px 80px 60px 50px 20px 280px 380px 460px 220px;
+    grid-template-rows: 40px 55px 100px 110px 190px 190px 35px 5px;
 }
 
-header {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    width: 115px;
-}
 body {
     background-color: #FFFAF3;
     color: #575279;
@@ -19,122 +13,137 @@ body {
     font-size: 13px;
 }
 
-.slideout {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    width: 35px;
-}
-
-footer {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 26;
-    grid-row-end: 26;
-    width: 300px;
+header {
+    grid-column-start: 9;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between
-    
+}
+
+li{
+    margin-right: 10px;
 }
 
 ul>li {
     list-style-type: none;
 }
 
+.slideout {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
 
 .sidebar {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 9;
+    width: 256px;
     background-color: #f2e9de;
-    width: 85px;
-    height: 675px;
-    display: flex;
-    justify-content:flex-start;
+    display:flex;
     flex-direction: column;
-    align-items: center;
 }
 
-#notelist {
-    padding-left: 0;
+#slidein {
+    align-self: flex-start;
+    margin-left: 200px;
+}
+
+footer {
+    grid-column-start: 7;
+    grid-row-start: 7;
+    width: 370px;
 }
 
 #sidehead {
     margin-bottom: 0;
-    font-size: 15px;
+    font-size: 19px;
+    align-self: center;
+}
+
+#notelist {
+    align-self: center;
+    padding-left: 0;
+    color: #3e8fb0;
 }
 
 #textarea {
-    grid-column-start: 3;
-    grid-row-start: 10;
+    grid-column-start: 7;
+    grid-row-start: 3;
+    width: 500px;
     display: flex;
     flex-direction: row;
-    width: 250px;
+    justify-content: flex-start;
+}
+
+#notebutton {
+    height: max-content;
 }
 
 #newnote {
+    width: 450px;
+    font-size: 18px;
+    height: 200px;
     background-color: #f2e9de;
     font-family: 'Averia Serif Libre', cursive;
-    width: 150px;
-    height: 200px;
 }
 
 #textareabuttons {
-    grid-column-start: 4;
-    grid-row-start: 17;
+    grid-column-start: 8;
+    grid-row-start: 5;
     display: flex;
     flex-direction: row;
+    height: max-content;
 }
 
 #save {
-    font-size: 13px;
+    font-size: 18px;
 }
 
 #del {
-    font-size: 13px;
+    font-size: 18px;
     color: #eb6f92;
 }
 
+#note {
+    width: 250px;
+    grid-column-start: 7;
+    grid-row-start: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
 button {
-    color: #575279;
-    border-style: none;
+    font-size: 32px;
     background-color: unset;
+    border-style: none;
     font-family: 'Averia Serif Libre', cursive;
-    font-size: 20px;
+    color: #575279;
+    height: max-content;
 }
 
 button:hover {
     color: #3e8fb0;
 }
 
-#note {
-    display: flex;
-    flex-direction: row;
-    width: 250px;
-    align-items: flex-start;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 5;
-}
-
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 430px) {
     .grid {
-        font-size: 18px;
-        grid-template-columns: repeat(8, 128px);
-        grid-template-rows: repeat(25, 36px);
+        display: grid;
+        grid-template-columns: repeat(5, 85px);
+        grid-template-rows: repeat(27, 25px);
     }
     
     header {
-        grid-column-start: 7;
-        grid-column-end: 8;
+        grid-column-start: 4;
+        grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 1;
-        width: 150px;
+        width: 115px;
     }
     
     .slideout {
@@ -142,68 +151,81 @@ button:hover {
         grid-column-end: 1;
         grid-row-start: 3;
         grid-row-end: 3;
-        width: 40px;
+        width: 35px;
     }
     
     footer {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 25;
-        grid-row-end: 25;
-        width: 400px;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 26;
+        grid-row-end: 26;
+        width: 300px;
     }
+    
+    
+    
+    ul>li {
+        list-style-type: none;
+    }
+    
     
     .sidebar {
         grid-column-start: 1;
-        grid-column-end: 3;
-        width: 256px;
-        height: 900px;
-    }
-    
-    #sidehead {
-        margin-bottom: 0;
-        font-size: 19px;
-    }
-    
-    #textarea {
-        grid-column-start: 4;
-        grid-column-end: 6;
-        grid-row-start: 6;
-        grid-row-end: 10;
-        width: 400px;
-        align-content: flex-start;
+        grid-column-end: 2;
+        
+        width: 85px;
+        height: 675px;
         
     }
     
+  
+    
+    #sidehead {
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+    
+    #textarea {
+        grid-column-start: 3;
+        grid-row-start: 10;
+        
+        width: 250px;
+    }
+    
     #newnote {
-        width: 370px;
-        font-size: 18px;
+        
+        width: 150px;
+        height: 200px;
     }
     
     #textareabuttons {
-        grid-column-start: 6;
-        grid-row-start: 12;
-
+        grid-column-start: 4;
+        grid-row-start: 17;
+        
     }
     
     #save {
-        font-size: 18px;
+        font-size: 13px;
     }
     
     #del {
-        font-size: 18px;
-    }
-    
-    #note {
-        width: 250px;
-        grid-column-start: 4;
-        grid-column-end: 4;
-        grid-row-start: 7;
-        grid-row-end: 7;
+        font-size: 13px;
+        
     }
     
     button {
-        font-size: 32px;
-        height: max-content;
+        
+        
+        font-size: 20px;
+    }
+    
+    
+    
+    #note {
+        
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 5;
     }
 }

@@ -8,33 +8,33 @@
     <link rel="stylesheet" href="./CSS/styles.css">
     <title>Notes</title>
 </head>
-<div class="grid">
-    <header>
-    <ul class="header">
-        <li><a href="">About</a></li>
-        <li><a href="">Docs</a></li>
-    </ul>
-    </header>
-    <body>
-        <div class="sidebar">
-            <button type="button"><<</button>
-            <p id="sidehead">my notes</p>
-            <ul id="notelist">
-                <li>note one</li>
-                <li>note two</li>
-            </ul>
-        </div>
-        <div id="textarea">
-            <button type="button">+</button>
-            <textarea id="newnote" rows="17" cols="17">your note here</textarea>
-        </div>
-        <div id="textareabuttons">
-            <button type="button" id="save">save</button>
-            <button type="button" id="del">delete</button>
-        </div>
-    </body>
-    <footer>
-    <p> Copyright &copy; 2021, J Corp. All rights reserved.</p>
-    </footer>
-</div>
+<body>
+    <div class="grid">
+        <header>
+        <ul class="header">
+            <li><a href="">About</a></li>
+            <li><a href="">Docs</a></li>
+        </ul>
+        </header>
+            <div class="sidebar">
+                <button id="slidein" type="button"><<</button>
+                <p id="sidehead">my notes</p>
+                <ul id="notelist">
+                    <li>note one</li>
+                    <li>note two</li>
+                </ul>
+            </div>
+            <div id="textarea">
+                <button id="notebutton" type="button">+</button>
+                <textarea id="newnote" rows="5" cols="25">your note here</textarea>
+            </div>
+            <div id="textareabuttons">
+                <button type="button" id="save">save</button>
+                <button type="button" id="del">delete</button>
+            </div>
+        <footer>
+        <p> Copyright &copy; 2021, J Corp. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
 </html>
