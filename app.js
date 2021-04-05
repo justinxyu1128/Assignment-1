@@ -8,5 +8,7 @@
 -use darkmodebtn.addEventListener('click', darkBtn);
 
 */
-/* note taking button */
+
+/* note taking button 
+*/
 /* note menu */
