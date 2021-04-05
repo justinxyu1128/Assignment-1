@@ -10,7 +10,6 @@ body {
     background-color: #FFFAF3;
     color: #575279;
     font-family: 'Averia Serif Libre', cursive;
-    font-size: 13px;
 }
 
 header {
@@ -131,77 +130,75 @@ button:hover {
     color: #3e8fb0;
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 450px) {
     .grid {
         display: grid;
-        grid-template-columns: repeat(5, 85px);
-        grid-template-rows: repeat(27, 25px);
+        grid-template-columns: 60px 30px 20px 95px 85px;
+        grid-template-rows: 60px 60px 215px 290px 50px;
+        font-size: 14px;
     }
-    
+
     header {
-        grid-column-start: 4;
-        grid-column-end: 5;
+        grid-column-start: 6;
         grid-row-start: 1;
-        grid-row-end: 1;
-        width: 115px;
+        font-size: 15px;
     }
     
     .slideout {
         grid-column-start: 1;
-        grid-column-end: 1;
+        grid-row-start: 2;
+        width: max-content;
+    }
+    
+    li{
+        margin-right: 5px;
+    }
+
+    #note {
+        grid-column-start: 3;
         grid-row-start: 3;
-        grid-row-end: 3;
-        width: 35px;
+        
     }
-    
+
     footer {
-        grid-column-start: 2;
-        grid-column-end: 2;
-        grid-row-start: 26;
-        grid-row-end: 26;
+        grid-column-start: 3;
+        grid-row-start: 5;
         width: 300px;
+        font-size: 13px;
     }
-    
-    
-    
-    ul>li {
-        list-style-type: none;
+
+    #slidein {
+        margin-left: 50px;
     }
-    
-    
+
     .sidebar {
         grid-column-start: 1;
         grid-column-end: 2;
-        
+        grid-row-start: 1;
+        grid-row-end: 5;
         width: 85px;
         height: 675px;
-        
     }
     
-  
-    
     #sidehead {
-        margin-bottom: 0;
         font-size: 15px;
     }
     
     #textarea {
-        grid-column-start: 3;
-        grid-row-start: 10;
-        
+        grid-column-start: 4;
+        grid-row-start: 3;
         width: 250px;
     }
     
     #newnote {
-        
         width: 150px;
         height: 200px;
+        font-size: 15px;
     }
     
     #textareabuttons {
-        grid-column-start: 4;
-        grid-row-start: 17;
-        
+        grid-column-start: 5;
+        grid-row-start: 4;
     }
     
     #save {
@@ -210,22 +207,9 @@ button:hover {
     
     #del {
         font-size: 13px;
-        
     }
     
     button {
-        
-        
         font-size: 20px;
-    }
-    
-    
-    
-    #note {
-        
-        grid-column-start: 2;
-        grid-column-end: 2;
-        grid-row-start: 5;
-        grid-row-end: 5;
     }
 }
